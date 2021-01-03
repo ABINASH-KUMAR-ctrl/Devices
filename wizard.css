@@ -1,6 +1,5 @@
 body{
     margin: 20px;
-    Background-color: transparent;
 }
 #connect{
     Background-color: transparent;
@@ -37,6 +36,7 @@ body{
     line-height: 1px;
 }
 #Content{
+    Background-color: transparent;
     width: 100px;
     height: 30px;
     border-color: transparent;
