@@ -1,0 +1,82 @@
+body{
+    margin: 20px;
+}
+#connect{
+    width: 60px;
+    height: 30px;
+    border-color: transparent;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18.5px;
+    line-height: 1px;
+    color: #454545;
+    outline: none !important;
+    letter-spacing:0;
+    cursor: pointer;      
+}
+#serial{
+    width: 20px;
+    height: 48px;
+    background-image: url(serial.svg);
+    background-repeat: no-repeat;
+    background-size: 14px;
+    background-position-x: center;
+    background-position-y: center;
+} 
+#wizard{ 
+    color:#909090;
+    font-family:Roboto;
+    text-align:left;
+    margin-left: 12px;
+    font-size:16px;
+    letter-spacing:0;
+    line-height: 1px;
+}
+#Content{
+    width: 100px;
+    height: 30px;
+    border-color: transparent;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18.5px;
+    line-height: 1px;
+    color: #454545;
+    outline: none !important;
+    letter-spacing:0;
+    cursor: pointer;      
+}
+#content-icon{
+    width: 20px;
+    height: 48px;
+    background-image: url(content_paste.svg);
+    background-repeat: no-repeat;
+    background-size: 14px;
+    background-position-x: center;
+    background-position-y: center;
+} 
+#Content-text{ 
+    color:#909090;
+    font-family:Roboto;
+    text-align:left;
+    margin-left: 12px;
+    font-size:16px;
+    letter-spacing:0;
+    line-height: 1px;
+}
+#outbox{
+    width: 600px;
+    height: 70px;
+    border-color: transparent;
+    font-family:Roboto;
+    font-size:16px;
+    letter-spacing:0;
+    margin-top: 20px;
+    outline: none !important;
+}
+.container{
+    display: grid;
+    grid-template-columns: 30px 200px;
+    margin-bottom: 30px;
+}

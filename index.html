@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="wizard.css">
+    </head>
+    <body>
+    <div class="container">
+      <div id="serial"></div>
+         <div id="Stack">
+            <input type="button" id="connect" value="USB"><br>
+            <a id="wizard">Charging this device</a>
+        </div>
+      </div>
+      <div class="container">
+        <div id="content-icon"></div>
+           <div id="Stack">
+              <input type="button" id="Content" value="Clipboard"><br>
+              <a id="Content-text">Clipboard content</a>
+          </div>
+          <div></div>
+          <textarea id="outbox"></textarea>
+        </div> 
+        <script>
+           const connect = document.getElementById("connect");
+                let device;
+                connect.onclick = async () => {
+                device = await navigator.usb.requestDevice({
+                    filters: [{ vendorId: 0x03F0 }]
+                });
+           };
+           // Content
+           const content = document.getElementById("Content");
+           content.onclick = async () => {
+           navigator.clipboard.readText().then(clipText =>
+            document.getElementById("outbox").innerText = clipText);
+           }
+        </script>
+    </body>
+</html>
