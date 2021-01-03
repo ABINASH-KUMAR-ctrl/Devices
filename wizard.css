@@ -112,6 +112,39 @@ body{
     overflow: hidden;
     outline: none !important;
 } 
+#location-button{
+    width: 86px;
+    height: 30px;
+    border-color: transparent;
+    background-color: transparent;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18.5px;
+    line-height: 1px;
+    color: #454545;
+    outline: none !important;
+    letter-spacing:0;
+    cursor: pointer; 
+} 
+#location-container{
+    background-image: url(location.svg);
+    background-repeat: no-repeat;
+    background-size: 12px;
+    background-position-x: center;
+    background-position-y: center;
+}  
+#location-output{
+    width: 200px;
+    height: 40px;
+    border-color: transparent;
+    font-family:Roboto;
+    font-size:16px;
+    letter-spacing:0;
+    margin-left: 38px;
+    overflow: hidden;
+    outline: none !important;
+} 
 .container{
     display: grid;
     grid-template-columns: 30px 200px;

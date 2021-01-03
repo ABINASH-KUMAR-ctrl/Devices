@@ -31,7 +31,15 @@
               <div></div>
               <a id="os-output"></a>
             </div> 
+
+        <div class="container">
+            <div id="location-container"></div>     
+                  <input type="button" onclick="getLocation()" id="location-button" value="Location"><br>
+                <div></div>
+                <a id="location-output"></a>
+        </div>
         <script>
+
             //USB
            const connect = document.getElementById("usb-button");
                 let device;
@@ -40,16 +48,34 @@
                     filters: [{ vendorId: 0x03F0 }]
                 });
            };
+
            // Content
            const content = document.getElementById("clip-button");
            content.onclick = async () => {
            navigator.clipboard.readText().then(clipText =>
             document.getElementById("clip-output").innerText = clipText);
            }
+
            //Platform
             function os() {
                 var x = navigator.platform;
                 document.getElementById("os-output").innerHTML = x;
+                }
+
+            //location
+            var x = document.getElementById("location-output");
+
+                function getLocation() {
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(showPosition);
+                } else { 
+                    x.innerHTML = "Geolocation is not supported by this browser.";
+                }
+                }
+                // Latitude: // Longitude: 
+                function showPosition(position) {
+                x.innerHTML = "Latitude: " + position.coords.latitude + 
+                "<br>Longitude: " + position.coords.longitude;
                 }
         </script>
     </body>
