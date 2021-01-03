@@ -2,6 +2,7 @@ body{
     margin: 20px;
 }
 #connect{
+    Background-color: transparent;
     width: 60px;
     height: 30px;
     border-color: transparent;
@@ -50,13 +51,15 @@ body{
 #content-icon{
     width: 20px;
     height: 48px;
+    Background-color: transparent;
     background-image: url(content_paste.svg);
     background-repeat: no-repeat;
     background-size: 14px;
     background-position-x: center;
     background-position-y: center;
 } 
-#Content-text{ 
+#Content-text{
+    Background-color: transparent;
     color:#909090;
     font-family:Roboto;
     text-align:left;
