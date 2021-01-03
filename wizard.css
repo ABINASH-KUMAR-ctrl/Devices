@@ -26,6 +26,7 @@ body{
     background-position-y: center;
 } 
 #wizard{ 
+    Background-color: transparent;
     color:#909090;
     font-family:Roboto;
     text-align:left;
