@@ -1,22 +1,7 @@
 body{
     margin: 20px;
 }
-#connect{
-    Background-color: transparent;
-    width: 60px;
-    height: 30px;
-    border-color: transparent;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18.5px;
-    line-height: 1px;
-    color: #454545;
-    outline: none !important;
-    letter-spacing:0;
-    cursor: pointer;      
-}
-#serial{
+#usb-container{
     width: 20px;
     height: 48px;
     background-image: url(serial.svg);
@@ -24,9 +9,23 @@ body{
     background-size: 14px;
     background-position-x: center;
     background-position-y: center;
+}
+#usb-button{
+    width: 60px;
+    height: 30px;
+    border-color: transparent;
+    background-color: transparent;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18.5px;
+    line-height: 1px;
+    color: #454545;
+    outline: none !important;
+    letter-spacing:0;
+    cursor: pointer;      
 } 
-#wizard{ 
-    Background-color: transparent;
+#usb-text{ 
     color:#909090;
     font-family:Roboto;
     text-align:left;
@@ -35,11 +34,11 @@ body{
     letter-spacing:0;
     line-height: 1px;
 }
-#Content{
-    Background-color: transparent;
+#clip-button{
     width: 100px;
     height: 30px;
     border-color: transparent;
+    background-color: transparent;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
@@ -50,18 +49,16 @@ body{
     letter-spacing:0;
     cursor: pointer;      
 }
-#content-icon{
+#clip-container{
     width: 20px;
     height: 48px;
-    Background-color: transparent;
     background-image: url(content_paste.svg);
     background-repeat: no-repeat;
     background-size: 14px;
     background-position-x: center;
     background-position-y: center;
 } 
-#Content-text{
-    Background-color: transparent;
+#clip-text{ 
     color:#909090;
     font-family:Roboto;
     text-align:left;
@@ -69,8 +66,9 @@ body{
     font-size:16px;
     letter-spacing:0;
     line-height: 1px;
+    overflow: hidden;
 }
-#outbox{
+#clip-output{
     width: 600px;
     height: 70px;
     border-color: transparent;
@@ -78,8 +76,42 @@ body{
     font-size:16px;
     letter-spacing:0;
     margin-top: 20px;
+    overflow: hidden;
     outline: none !important;
 }
+#os-button{
+    width: 86px;
+    height: 30px;
+    border-color: transparent;
+    background-color: transparent;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18.5px;
+    line-height: 1px;
+    color: #454545;
+    outline: none !important;
+    letter-spacing:0;
+    cursor: pointer; 
+} 
+#os-container{
+    background-image: url(devices.svg);
+    background-repeat: no-repeat;
+    background-size: 22px;
+    background-position-x: center;
+    background-position-y: center;
+}  
+#os-output{
+    width: 60px;
+    height: 20px;
+    border-color: transparent;
+    font-family:Roboto;
+    font-size:16px;
+    letter-spacing:0;
+    margin-left: 38px;
+    overflow: hidden;
+    outline: none !important;
+} 
 .container{
     display: grid;
     grid-template-columns: 30px 200px;

@@ -1,29 +1,39 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="wizard.css">
     </head>
     <body>
+
     <div class="container">
-      <div id="serial"></div>
+      <div id="usb-container"></div>
          <div id="Stack">
-            <input type="button" id="connect" value="USB"><br>
-            <a id="wizard">Charging this device</a>
+            <input type="button" id="usb-button" value="USB"><br>
+            <a id="usb-text">Charging this device</a>
         </div>
       </div>
+
       <div class="container">
-        <div id="content-icon"></div>
+        <div id="clip-container"></div>
            <div id="Stack">
-              <input type="button" id="Content" value="Clipboard"><br>
-              <a id="Content-text">Clipboard content</a>
+              <input type="button" id="clip-button" value="Clipboard"><br>
+              <a id="clip-text">Clipboard content</a>
           </div>
           <div></div>
-          <textarea id="outbox"></textarea>
-        </div> 
+          <textarea id="clip-output"></textarea>
+        </div>
+
+        <div class="container">
+            <div id="os-container"></div>     
+                <input type="button" onclick="os()" id="os-button" value="Platform"><br>
+              <div></div>
+              <a id="os-output"></a>
+            </div> 
         <script>
-           const connect = document.getElementById("connect");
+            //USB
+           const connect = document.getElementById("usb-button");
                 let device;
                 connect.onclick = async () => {
                 device = await navigator.usb.requestDevice({
@@ -31,11 +41,16 @@
                 });
            };
            // Content
-           const content = document.getElementById("Content");
+           const content = document.getElementById("clip-button");
            content.onclick = async () => {
            navigator.clipboard.readText().then(clipText =>
-            document.getElementById("outbox").innerText = clipText);
+            document.getElementById("clip-output").innerText = clipText);
            }
+           //Platform
+            function os() {
+                var x = navigator.platform;
+                document.getElementById("os-output").innerHTML = x;
+                }
         </script>
     </body>
 </html>
