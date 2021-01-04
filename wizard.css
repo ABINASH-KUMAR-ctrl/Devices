@@ -1,34 +1,7 @@
 body{
     margin: 20px;
 }
-#usb-container{
-    width: 20px;
-    height: 48px;
-    background-image: url(serial.svg);
-    background-repeat: no-repeat;
-    background-size: 14px;
-    background-position-x: center;
-    background-position-y: center;
-} 
-#usb-text{ 
-    color:#909090;
-    font-family:Roboto;
-    text-align:left;
-    margin-left: 12px;
-    font-size:16px;
-    letter-spacing:0;
-    line-height: 1px;
-}
-#clip-container{
-    width: 20px;
-    height: 48px;
-    background-image: url(content_paste.svg);
-    background-repeat: no-repeat;
-    background-size: 14px;
-    background-position-x: center;
-    background-position-y: center;
-} 
-#clip-text{ 
+#text{ 
     color:#909090;
     font-family:Roboto;
     text-align:left;
@@ -38,27 +11,6 @@ body{
     line-height: 1px;
     overflow: hidden;
 } 
-#os-container{
-    background-image: url(devices.svg);
-    background-repeat: no-repeat;
-    background-size: 22px;
-    background-position-x: center;
-    background-position-y: center;
-}    
-#location-container{
-    background-image: url(location.svg);
-    background-repeat: no-repeat;
-    background-size: 12px;
-    background-position-x: center;
-    background-position-y: center;
-}  
-#core-container{
-    background-image: url(core.svg);
-    background-repeat: no-repeat;
-    background-size: 18px;
-    background-position-x: center;
-    background-position-y: center;
-}  
 .container{
     display: grid;
     grid-template-columns: 30px 200px;
@@ -90,3 +42,8 @@ body{
     letter-spacing:0;
     cursor: pointer; 
 }
+#container-wizard{
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+} 

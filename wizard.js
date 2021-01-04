@@ -40,3 +40,8 @@
            var logicalProcessorCount = navigator.hardwareConcurrency;
              document.getElementById("core-output").innerHTML = logicalProcessorCount;
         }
+// RAM
+        function ram(){
+                var memoryAmount = navigator.deviceMemory;
+                   document.getElementById("ram-output").innerHTML = `${memoryAmount}GB`;
+        }
