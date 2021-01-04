@@ -10,7 +10,8 @@
     <div class="container">
       <div id="usb-container"></div>
          <div id="Stack">
-            <input type="button" id="usb-button" value="USB"><br>
+            <input type="button" id="usb-button" value="USB" class="button"
+            style="width: 60px;"><br>
             <a id="usb-text">Charging this device</a>
         </div>
       </div>
@@ -18,65 +19,38 @@
       <div class="container">
         <div id="clip-container"></div>
            <div id="Stack">
-              <input type="button" id="clip-button" value="Clipboard"><br>
+              <input type="button" id="clip-button" value="Clipboard" class="button"
+              style="width: 100px;"><br>
               <a id="clip-text">Clipboard content</a>
           </div>
           <div></div>
-          <textarea id="clip-output"></textarea>
+          <textarea id="clip-output" class="output" style="width: 600px; height: 70px;
+          margin-top: 20px; margin-left: 10px;"></textarea>
         </div>
 
         <div class="container">
             <div id="os-container"></div>     
-                <input type="button" onclick="os()" id="os-button" value="Platform"><br>
+                <input type="button" onclick="os()" id="os-button" value="Platform" class="button"
+                style="width: 86px;"><br>
               <div></div>
-              <a id="os-output"></a>
+              <a id="os-output" class="output"></a>
             </div> 
 
         <div class="container">
             <div id="location-container"></div>     
-                  <input type="button" onclick="getLocation()" id="location-button" value="Location"><br>
+                  <input type="button" onclick="getLocation()" id="location-button" value="Location" class="button"
+                  style="width: 86px;"><br>
                 <div></div>
-                <a id="location-output"></a>
+                <a id="location-output" class="output"></a>
         </div>
-        <script>
-
-            //USB
-           const connect = document.getElementById("usb-button");
-                let device;
-                connect.onclick = async () => {
-                device = await navigator.usb.requestDevice({
-                    filters: [{ vendorId: 0x03F0 }]
-                });
-           };
-
-           // Content
-           const content = document.getElementById("clip-button");
-           content.onclick = async () => {
-           navigator.clipboard.readText().then(clipText =>
-            document.getElementById("clip-output").innerText = clipText);
-           }
-
-           //Platform
-            function os() {
-                var x = navigator.platform;
-                document.getElementById("os-output").innerHTML = x;
-                }
-
-            //location
-            var x = document.getElementById("location-output");
-
-                function getLocation() {
-                if (navigator.geolocation) {
-                    navigator.geolocation.getCurrentPosition(showPosition);
-                } else { 
-                    x.innerHTML = "Geolocation is not supported by this browser.";
-                }
-                }
-                // Latitude: // Longitude: 
-                function showPosition(position) {
-                x.innerHTML = "Latitude: " + position.coords.latitude + 
-                "<br>Longitude: " + position.coords.longitude;
-                }
-        </script>
+        
+        <div class="container">
+            <div id="core-container"></div>     
+                <input type="button" onclick="core()" id="core-button" value="CPU core" class="button"
+                style="width: 86px;"><br>
+              <div></div>
+              <a id="core-output" class="output"></a>
+            </div>
+        <script src="wizard.js"></script>
     </body>
 </html>
