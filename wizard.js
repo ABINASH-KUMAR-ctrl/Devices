@@ -43,5 +43,5 @@
 // RAM
         function ram(){
                 var memoryAmount = navigator.deviceMemory;
-                   document.getElementById("ram-output").innerHTML = `${memoryAmount}GB`;
+                   document.getElementById("ram-output").innerHTML = memoryAmount+"GB";
         }
